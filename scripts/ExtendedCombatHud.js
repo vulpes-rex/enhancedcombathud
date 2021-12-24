@@ -1669,8 +1669,8 @@ Hooks.on("preUpdateToken", (token, updates) => {
 Hooks.on("updateCombat", (combat, updates) => {
   if (
     canvas.hud.enhancedcombathud?.hudData &&
-    combat?.combatant?._token.id ==
-      canvas.hud.enhancedcombathud?.hudData?.token?.id
+    combat?.current?.tokenId ==
+      canvas.hud.enhancedcombathud?.hudData?.token?.data._id
   ) {
     canvas.hud.enhancedcombathud.newRound();
   }
